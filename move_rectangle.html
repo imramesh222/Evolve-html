@@ -3,14 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rectsangle</title>
+  <title>Parallelogram</title>
   <style>
-    .rectangle{
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .rectangle {
       width: 200px;
       height: 100px;
-      transform: skew(160deg);
+      transform: skew(20deg);
       background: red;
-      margin: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation-name: anim1;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    @keyframes anim1 {
+      0% {
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100px;
+        background: red;
+        border-radius: 0;
+      }
+      25% {
+        top: calc(100vh - 100px); /* bottom left */
+        left: 0;
+      }
+      50% {
+        top: calc(100vh - 100px); /* bottom right */
+        left: calc(100vw - 200px);
+      }
+      75% {
+        top: 0; /* top right */
+        left: calc(100vw - 200px);
+      }
+      100% {
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100px;
+        background: red;
+        border-radius: 0;
+      }
     }
   </style>
 </head>
