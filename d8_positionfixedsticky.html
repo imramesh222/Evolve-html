@@ -9,58 +9,105 @@
       margin: 0;
       box-sizing:border-box ;
       text-align: center;
-
+      font-size: 30px;
     }
-    .first,
-    .second{
+
+    .first{
       width: 100%;
       height: 100px;
-      background:#376d6d;
+      background:#060707;
+      color: #fff;
     }
-
-    main{
-      width: 100%;
-      height: 90vh;
-
-    }
-    
 
     .second{
       position: sticky;
-      top: 0;
+      top: 10px;
       left: 0;
+      background-color: brown;
     }
-    .main{
+    main{
         width: 100%;
         height: 90vh;
+        background: green;
     }
     button{
-      padding: 100%;
+      padding: 10px 20px;
       border: none;
       box-shadow: 0 0 8px black;
-     background: rgb(142, 51, 145); 
-     right: 20px;
-     bottom: 20px;
+      background: rgb(142, 51, 145); 
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      cursor: pointer;
     }
-    .footer{
+    button:hover{
+      padding: 15px 25px;
+      box-shadow: 0 0 8px rgb(16, 8, 8);
+      background: rgb(207, 80, 34);
+      position: absoluteS;
+    }
+    footer{
       width:100%;
       height: 100px;
-      background: rgb(190, 106, 159);
-
+      background: rgb(37, 43, 46);
+      color: whitesmoke;
      }
 
-     
+     .rectangle{
+      background: red;
+      width: 200px;
+      height: 100px;
+      transform: skew(-20deg);
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation-name: anim1;
+      animation-duration: 5s;
+      animation-iteration-count: 2;
+      animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+      
+    }
+    @keyframes anim1{
+      0%{
+
+      }
+      25%{
+        top: calc(100vh - 100px);
+        left: 0;
+      }
+      50%{
+        top: calc(100vh - 100px);
+        left: calc(100vw - 200px);
+      }
+      75% {
+        top: 0; 
+        left: calc(100vw - 200px);
+      }
+      100% {
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100px;
+        background: red;
+        border-radius: 0;
+      }
+    }
+
 
     
   </style>
 </head>
 <body>
-  <header>
+  <div class="rectangle"></div>
+  
     <div class="first">First Header</div>
     <div class="second">Second Header</div>
-  </header>
-  <div class="footer"></div>
+  
+  <main></main>
+
+ 
 <footer>This is footer</footer>
-<button>Submit</button>
+<button>Inquire Me</button>
 </body>
 </html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PseudoClass</title>
+  <style>
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
+    h1:hover{
+      margin: 10%;
+      color: red;
+      cursor: pointer;
+    }
+    .box{
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+
+    }
+    .box:hover{
+      border-radius: 50%;
+      background: blue;
+      transition: 4s;
+    }
+    h1::before{
+      content: "";
+      clear: both;
+      height: 10px;
+      width: 40%;
+      background: rgb(207, 56, 56);
+      border: 10px solid black;;
+      display: block;
+    }
+    h1::after{
+      content: "";
+      clear: both;
+      height: 10px;
+      width: 40%;
+      background: rgb(207, 56, 56);
+      border: 10px solid black;;
+      display: block;
+    }
+    table{
+      border: 1px solid black;
+      border-collapse: collapse;
+
+    }
+    table tbody tr:nth-child(odd){
+      color: blueviolet;
+      background-color: rgb(126, 218, 118);
+    }
+    table tbody tr:hover{
+      background: red;
+    }
+    p:first-line{
+      color: red;
+    }
+    p::first-letter{
+      color: rgb(22, 168, 80);
+      font-size: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Introduction</h1>
+  <div class="box"></div>
+  <table border="">
+    <tr>
+      <th>SN</th>
+      <th>Name</th>
+      <th>Address</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Ramesh</td>
+      <td>Humla</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Ramesh</td>
+      <td>Humla</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Ramesh</td>
+      <td>Humla</td>
+    </tr>
+  </table>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptatum nam labore blanditiis tempora recusandae, corporis ea dolorem, consequuntur nesciunt cupiditate quod illum porro mollitia. Dolorum praesentium officia minus laudantium?</p>
+</body>
+</html>

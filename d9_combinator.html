@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Combinators</title>
+  <style>
+
+    div p{
+      color: red;
+      background: #000;
+    }
+    div > p{
+      font-size: 25px;
+    }
+    /* 3.General Sibling selectors */
+    div ~ p{
+      color: blue;
+    }
+    /* 4.Adjacent Siblings selectors */
+    div +p{
+      background: yellow;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Combinators
+  1.Descndent selectors
+2. Child selectors '>'
+3.General Sibling selectors
+4.Adjacent Siblings selectors -->
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing provident debitis rerum cupiditate ut porro distinctio modi blanditiis.</p>
+  <div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing excepturi unde quae consequatur, officiis quasi repudiandae. Delectus, illum.
+    <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam iusto repudiandae odio excepturi libero dolorem iusto omnis, itaque, necessitatibus ullam.</article>
+    <p>Lorem ipsum dolor sit amet consectetur quos dolorem saepe, provident rerum aut asperiores illo adipisci, cupiditate esse? Voluptatum?</p>
+  </div>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing ostrum aliquid, officia veniam reprehenderit deserunt harum, ad esse tenetur animi.</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione minus quas, fuga eveniet sit culpa a sed adipisci reprehenderit magnam eius dolorum delectus saepe necessitatibus, sunt excepturi voluptates distinctio? Totam?</p>
+</body>
+</html>
